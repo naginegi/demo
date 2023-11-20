@@ -135,6 +135,28 @@ public class ArrayTest {
 		}
 		System.out.println(intList);
 	}
+	@Test
+	public void foreachTest2() {
+		Scanner scan = new Scanner(System.in);
+		List<Integer> intList = new ArrayList<>();
+		int input = scan.nextInt();
+		int count = 0;
+		for (int j = 1; j <= input; j++) {
+			for (int i = 1; i <= j; i++) {
+				if (j % i == 0) {
+					count++;
+				}
+			}
+			if (count == 2) {
+//				System.out.println("Y : " + j);
+				intList.add(j);
+			} else {
+//				System.out.println("N");
+			}
+			count = 0;
+		}
+		System.out.println(intList);
+	}
 
 	
 	
